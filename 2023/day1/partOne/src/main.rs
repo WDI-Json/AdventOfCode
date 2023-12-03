@@ -8,7 +8,7 @@ fn main() {
 }
 
 fn sum_values_from_file() -> Result<u32, std::io::Error> {
-    let file_content = fs::read_to_string("input.txt")?;
+    let file_content = fs::read_to_string("../input.txt")?;
 
     let sum: u32 = file_content
         .lines()
