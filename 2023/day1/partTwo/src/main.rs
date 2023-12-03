@@ -12,14 +12,14 @@ fn sum_values_from_file(filename: &str) -> i32 {
     
     let mut sum: i32 = 0;
     for line_text in input_strings {
-        sum += get_digits(line_text);
+        sum += get_number_from_test_input(line_text);
     }
 
     sum
 }
 
 
-fn get_digits(text: &str) -> i32  {
+fn get_number_from_test_input(text: &str) -> i32  {
     let first_num = first_or_last_number(text, false);
     let last_num = first_or_last_number(text, true);
 
@@ -131,32 +131,32 @@ mod tests {
     }
 
     #[test]
-    fn test_get_digits_two1nine() {
-        assert_eq!(get_digits("two1nine"), 29);
+    fn test_get_number_from_test_input_two1nine() {
+        assert_eq!(get_number_from_test_input("two1nine"), 29);
     }
     #[test]
-    fn test_get_digits_eightwothree() {
-        assert_eq!(get_digits("eightwothree"), 83);
+    fn test_get_number_from_test_input_eightwothree() {
+        assert_eq!(get_number_from_test_input("eightwothree"), 83);
     }
     #[test]
-    fn test_get_digits_abcone2threexyz() {
-        assert_eq!(get_digits("abcone2threexyz"), 13);
+    fn test_get_number_from_test_input_abcone2threexyz() {
+        assert_eq!(get_number_from_test_input("abcone2threexyz"), 13);
     }
     #[test]
-    fn test_get_digits_xtwone3four() {
-        assert_eq!(get_digits("xtwone3four"), 24);
+    fn test_get_number_from_test_input_xtwone3four() {
+        assert_eq!(get_number_from_test_input("xtwone3four"), 24);
     }
     #[test]
-    fn test_get_digits_4nineeightseven2() {
-        assert_eq!(get_digits("4nineeightseven2"), 42);
+    fn test_get_number_from_test_input_4nineeightseven2() {
+        assert_eq!(get_number_from_test_input("4nineeightseven2"), 42);
     }
     #[test]
-    fn test_get_digits_zoneight234() {
-        assert_eq!(get_digits("zoneight234"), 14);
+    fn test_get_number_from_test_input_zoneight234() {
+        assert_eq!(get_number_from_test_input("zoneight234"), 14);
     }
     #[test]
-    fn test_get_digits_7pqrstsixteen() {
-        assert_eq!(get_digits("7pqrstsixteen"), 76);
+    fn test_get_number_from_test_input_7pqrstsixteen() {
+        assert_eq!(get_number_from_test_input("7pqrstsixteen"), 76);
     }
 }
 
