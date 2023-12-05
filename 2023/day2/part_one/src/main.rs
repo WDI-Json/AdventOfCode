@@ -58,9 +58,10 @@ mod tests {
             let red = row.get("red");
             let green = row.get("green");
             let blue = row.get("blue");
-            
-            
-
+            //only 12 red cubes, 13 green cubes, and 14 blue cubes?
+            if red > Some(&12) || green > Some(&13) || blue > Some(&14) {
+                break;
+            }
         }
 
         for row in rows {
